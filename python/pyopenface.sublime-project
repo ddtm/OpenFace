@@ -1,0 +1,25 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+  "SublimeLinter":
+  {
+    "linters":
+    {
+      "clang": {
+        "extra_flags": "-Wall -std=c++11",
+        "include_dirs": [
+          "${project_folder}",
+          "${project_folder}/../lib/local/LandmarkDetector/include",
+          "${project_folder}/../lib/local/FaceAnalyser/include",
+          "${project_folder}/../lib/3rdParty/dlib/include",
+          "/usr/include/python2.7",
+          "/opt/local/include"
+        ]
+      },
+    }
+  },
+}
