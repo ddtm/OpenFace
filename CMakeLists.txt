@@ -12,7 +12,7 @@ MESSAGE("  OpenCV_LIBRARIES: ${OpenCV_LIBRARIES}")
 MESSAGE("  OpenCV_LIBRARY_DIRS: ${OpenCV_LIBRARY_DIRS}") 
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
-find_package( Boost 1.5.9 REQUIRED COMPONENTS filesystem system python)
+find_package( Boost 1.5.9 REQUIRED COMPONENTS filesystem system)
 MESSAGE("Boost information:") 
 MESSAGE("  Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}") 
 MESSAGE("  Boost_LIBRARIES: ${Boost_LIBRARIES}") 

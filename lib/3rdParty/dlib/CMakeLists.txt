@@ -361,6 +361,14 @@ if (NOT TARGET dlib)
 
       add_library(dlib STATIC ${source_files} )
       target_link_libraries(dlib ${dlib_needed_libraries} )
+      if (UNIX AND NOT DLIB_IN_PROJECT_BUILD)
+         if (DLIB_USE_CUDA)
+            cuda_add_library(dlib_shared SHARED ${source_files} )
+         else()
+            add_library(dlib_shared SHARED ${source_files} )
+         endif()
+         target_link_libraries(dlib_shared ${dlib_needed_libraries} )
+      endif()
 
    endif ()  ##### end of if NOT DLIB_ISO_CPP_ONLY ##########################################################
 
